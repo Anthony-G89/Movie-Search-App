@@ -13,7 +13,7 @@ function SearchForm(props) {
                 name="search"
                 type="text"
                 placeholder="Enter a Movie"
-                className="form-control"
+                className="form-control userInput"
                  />
 
                  <button className="movieBtn" onClick={props.handleSubmitForm}>Search</button>
