@@ -42,3 +42,10 @@ p {
     height: 289px;
     width: 343px;
 }
+
+@media only screen and (max-width:862px) {
+    .noPoster {
+        height: 229px;
+        width: 223px;
+    }
+}
