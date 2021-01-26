@@ -13,6 +13,13 @@
   }
 }
 
+.noDisplay {
+    position: absolute;
+    bottom: 9em;
+    left: 19em;
+    font-size: 40px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

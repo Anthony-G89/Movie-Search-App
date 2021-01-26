@@ -12,7 +12,7 @@ function SearchForm(props) {
                 value={props.value}
                 name="search"
                 type="text"
-                placeholder="Enter a Movie"
+                placeholder="Enter a Movie...."
                 className="form-control userInput"
                  />
 

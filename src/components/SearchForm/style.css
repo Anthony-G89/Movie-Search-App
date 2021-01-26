@@ -8,13 +8,19 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .movieBtn {
   padding: 5px 30px;
   margin-top: 14px;
-  background-color: black;
+  background-color: #0c26b5;
   color: white;
   font-size: 20px;
   cursor: pointer;
+  transition:  .6s;
 }
+
+.movieBtn:hover {
+    letter-spacing: 7px;
+} 

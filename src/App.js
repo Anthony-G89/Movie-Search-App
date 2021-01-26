@@ -12,10 +12,15 @@ class MovieContainer extends Component {
     results: {}
   };
 
+
+  componentDidMount() {
+    this.searchMovies("The Godfather")
+  }
+
   searchMovies = moviesCollected => {
     API.movieSearch(moviesCollected)
-    .then(response => this.setState({results: response.data}))
-    .catch(err => console.log(err))
+      .then(response => this.setState({ results: response.data }))
+      .catch(err => console.log(err))
   };
 
   handleInputChange = event => {
@@ -38,21 +43,24 @@ class MovieContainer extends Component {
       <div>
         <Header />
         <SearchForm
-        value={this.state.search}
-        handleInputChange={this.handleInputChange}
-        handleSubmitForm={this.handleSubmitForm}
-         />
-         <MovieDetail 
-         title={this.state.results.Title}
-         src={this.state.results.Poster}
-         actors ={this.state.results.Actors}
-         director={this.state.results.Director}
-         plot={this.state.results.Plot}
-         rated={this.state.results.Rated}
-         genre={this.state.results.Genre}
-         released={this.state.results.Released}
-         />
-
+          value={this.state.search}
+          handleInputChange={this.handleInputChange}
+          handleSubmitForm={this.handleSubmitForm}
+        />
+        {this.state.results.Title ? (
+          <MovieDetail
+            title={this.state.results.Title}
+            src={this.state.results.Poster}
+            actors={this.state.results.Actors}
+            director={this.state.results.Director}
+            plot={this.state.results.Plot}
+            rated={this.state.results.Rated}
+            genre={this.state.results.Genre}
+            released={this.state.results.Released}
+          />
+        ) : (
+           <h3 className="noDisplay">No results to display! 😞</h3>
+         )}
 
       </div>
     );
