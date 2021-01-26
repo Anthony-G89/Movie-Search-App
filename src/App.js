@@ -43,9 +43,12 @@ class MovieContainer extends Component {
         handleSubmitForm={this.handleSubmitForm}
          />
          <MovieDetail 
-         title={this.state.results.title}
+         title={this.state.results.Title}
          src={this.state.results.Poster}
+         actors ={this.state.results.Actors}
          director={this.state.results.Director}
+         plot={this.state.results.Plot}
+         rated={this.state.results.Rated}
          genre={this.state.results.Genre}
          released={this.state.results.Released}
          />

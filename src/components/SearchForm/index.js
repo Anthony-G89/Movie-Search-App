@@ -1,11 +1,12 @@
 import React from "react";
+import "./style.css";
 
 
 function SearchForm(props) {
     return (
         <form>
-            <div className="search-Form">
-                <label htmlFor="search">Search for a Movie:</label>
+            <div className="search-Form text-center">
+                <label className="movieSearchLabel" htmlFor="search">Search for a Movie:</label>
                 <input
                 onChange={props.handleInputChange}
                 value={props.value}
@@ -15,7 +16,7 @@ function SearchForm(props) {
                 className="form-control"
                  />
 
-                 <button onClick={props.handleSubmitForm}>Search</button>
+                 <button className="movieBtn" onClick={props.handleSubmitForm}>Search</button>
 
             </div>
         </form>
