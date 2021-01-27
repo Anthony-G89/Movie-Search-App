@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+body {
+    padding-bottom: 26px;
+}
 .movieContainer {
     margin-top: 120px;
     box-sizing: border-box;
@@ -52,5 +54,6 @@ img {
 @media only screen and (max-width:500px) {
     .movieContainer {
        border-radius: 0px;
+       box-shadow: 5px 22px 25px 6px;
     }
 }
