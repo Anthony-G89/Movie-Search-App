@@ -34,8 +34,11 @@ class MovieContainer extends Component {
 
   handleSubmitForm = event => {
     event.preventDefault();
-    this.searchMovies(this.state.search)
-  }
+    this.searchMovies(this.state.search);
+    this.setState({
+      search: ""
+    })
+  };
 
 
   render() {
