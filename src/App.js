@@ -15,11 +15,11 @@ class MovieContainer extends Component {
 
   componentDidMount() {
     this.searchMovies("The Godfather")
-  }
+  };
 
   searchMovies = moviesCollected => {
     API.movieSearch(moviesCollected)
-      .then(response => this.setState({ results: response.data }))
+      .then(response => this.setState({ results: response.data }) + console.log(response))
       .catch(err => console.log(err))
   };
 

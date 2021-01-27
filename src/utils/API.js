@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASEURL = "http://www.omdbapi.com/?t=";
+const BASEURL = "https://www.omdbapi.com/?t=";
 const APIKEY = "&apikey=3e8adfe4";
 
 // eslint-disable-next-line import/no-anonymous-default-export

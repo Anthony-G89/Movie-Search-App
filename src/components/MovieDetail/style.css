@@ -7,7 +7,7 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 230px;
+    border-radius: 135px;
     padding: 30px;
     box-shadow: 9px 14px 11px;
     /* display: none; */
@@ -31,6 +31,10 @@ p {
     font-size: 18px;
 }
 
+img {
+    padding-bottom: 26px;
+}
+
 .movieInfo {
     font-weight: 800;
     font-size: 19px;
@@ -38,14 +42,9 @@ p {
     
 }
 
-.noPoster {
-    height: 289px;
-    width: 343px;
-}
-
 @media only screen and (max-width:862px) {
     .noPoster {
-        height: 229px;
-        width: 223px;
+        height: 216px;
+        width: 181px;
     }
 }
