@@ -23,7 +23,7 @@
 @media only screen and (max-width: 499px) {
   .noDisplay {
     position: absolute;
-    left: 39px;
+    left: 15px;
     top: 500px;
     font-size: 34px;
     text-transform: uppercase;
