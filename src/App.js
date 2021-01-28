@@ -62,7 +62,7 @@ class MovieContainer extends Component {
             released={this.state.results.Released}
           />
         ) : (
-           <h3 className="noDisplay">No results to display! 😞</h3>
+           <h3 className="noDisplay">No results to display!</h3>
          )}
 
       </div>

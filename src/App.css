@@ -20,6 +20,16 @@
     font-size: 40px;
 }
 
+@media only screen and (max-width: 499px) {
+  .noDisplay {
+    position: absolute;
+    left: 39px;
+    top: 500px;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
