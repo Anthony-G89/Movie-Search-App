@@ -9,7 +9,7 @@ class MovieContainer extends Component {
 
   state = {
     search: "",
-    results: {}
+    results: []
   };
 
 
@@ -19,7 +19,7 @@ class MovieContainer extends Component {
 
   searchMovies = moviesCollected => {
     API.movieSearch(moviesCollected)
-      .then(response => this.setState({ results: response.data }) + console.log(response))
+      .then(response => this.setState({ results: response.data }) + console.log(response.data))
       .catch(err => console.log(err))
   };
 
@@ -44,7 +44,7 @@ class MovieContainer extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header> Movie Search</Header>
         <SearchForm
           value={this.state.search}
           handleInputChange={this.handleInputChange}
