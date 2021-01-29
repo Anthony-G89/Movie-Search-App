@@ -1,0 +1,7 @@
+.noDisplay {
+    position: relative;
+    top: 163px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}

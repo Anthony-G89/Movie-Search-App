@@ -15,7 +15,7 @@ function movieDetail (props) {
             <p> <span  className="movieInfo">Actors:</span> {props.actors === "N/A" ? "No information to provide...sorry" : props.actors}</p>
             <p><span  className="movieInfo">Directors:</span> {props.director === "N/A" ? "No information to provide...sorry" : props.director}</p>
             <p><span  className="movieInfo">Plot:</span> {props.plot === "N/A" ? "No information to provide...sorry" : props.plot}</p>
-            <p><span  className="movieInfo">Rated:</span> {props.rated === "N/A" ? "No information to provide...sorry" : props.rated}</p>
+            <p><span  className="movieInfo">Rated:</span> {props.rateds === "N/A" ? "No information to provide...sorry" : props.rateds}</p>
             <p><span  className="movieInfo">Genre:</span> {props.genre === "N/A" ? "No information to provide...sorry" : props.genre}</p>
             <p><span  className="movieInfo">Released:</span> {props.released === "N/A" ? "No information to provide...sorry" : props.released}</p>
         </div>

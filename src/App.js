@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
 import MovieDetail from "./components/MovieDetail";
+import NotFound from "./components/NotFound"
 import API from "./utils/API";
 import './App.css';
 
@@ -10,17 +11,6 @@ class MovieContainer extends Component {
   state = {
     search: "",
     results: []
-  };
-
-
-  componentDidMount() {
-    this.searchMovies("The Godfather")
-  };
-
-  searchMovies = moviesCollected => {
-    API.movieSearch(moviesCollected)
-      .then(response => this.setState({ results: response.data }) + console.log(response.data))
-      .catch(err => console.log(err))
   };
 
   handleInputChange = event => {
@@ -35,16 +25,31 @@ class MovieContainer extends Component {
   handleSubmitForm = event => {
     event.preventDefault();
     this.searchMovies(this.state.search);
+    if(!this.state.search) {
+      alert("please enter a movie");
+      window.location.reload();
+    };
     this.setState({
       search: ""
     })
   };
 
+  searchMovies = moviesCollected => {
+    API.movieSearch(moviesCollected)
+      .then(response => this.setState({ results: response.data }) + console.log(response.data))
+      .catch(err => console.log(err))
+  };
+
+  componentDidMount() {
+    this.searchMovies("The Godfather")
+  };
+
+
 
   render() {
     return (
       <div>
-        <Header> Movie Search</Header>
+        <Header> Movies Search</Header>
         <SearchForm
           value={this.state.search}
           handleInputChange={this.handleInputChange}
@@ -57,12 +62,12 @@ class MovieContainer extends Component {
             actors={this.state.results.Actors}
             director={this.state.results.Director}
             plot={this.state.results.Plot}
-            rated={this.state.results.Rated}
+            rateds={this.state.results.Rated}
             genre={this.state.results.Genre}
             released={this.state.results.Released}
           />
         ) : (
-           <h3 className="noDisplay">No results to display!</h3>
+           <NotFound >{this.state.results.Error}</NotFound>
          )}
 
       </div>
