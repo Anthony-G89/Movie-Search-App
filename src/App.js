@@ -62,12 +62,13 @@ class MovieContainer extends Component {
             actors={this.state.results.Actors}
             director={this.state.results.Director}
             plot={this.state.results.Plot}
-            rateds={this.state.results.Rated}
+            rated={this.state.results.Rated}
             genre={this.state.results.Genre}
             released={this.state.results.Released}
           />
         ) : (
            <NotFound >{this.state.results.Error}</NotFound>
+          
          )}
 
       </div>
