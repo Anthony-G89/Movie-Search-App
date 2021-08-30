@@ -14,18 +14,29 @@ class MovieContainer extends Component {
   };
 
   handleInputChange = event => {
-    const value = event.target.value;
-    const name = event.target.name;
+
+// TWO DIFF WAYS TO setState //
+
+    // console.log(event.target);
+
+    // const value = event.target.value;
+    // const name = event.target.name;
+    // this.setState({
+    //   [name]: value
+    // });
+
+
+      // console.log(event.target.value);
     this.setState({
-      [name]: value
-    });
+      search: event.target.value
+    })
   };
 
 
   handleSubmitForm = event => {
     event.preventDefault();
     this.searchMovies(this.state.search);
-    if(!this.state.search) {
+    if (!this.state.search) {
       alert("please enter a movie");
       window.location.reload();
     };
@@ -67,9 +78,9 @@ class MovieContainer extends Component {
             released={this.state.results.Released}
           />
         ) : (
-           <NotFound >{this.state.results.Error}</NotFound>
-          
-         )}
+          <NotFound >{this.state.results.Error}</NotFound>
+
+        )}
 
       </div>
     );
